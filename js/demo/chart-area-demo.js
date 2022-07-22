@@ -32,8 +32,9 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     datasets: [{
-      label: "OPEX",
+      label: "Earnings",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -45,19 +46,9 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
+      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
     }],
-    },
-  plugins: [ChartDataSource],
-		plugins: {
-			datasource: {
-				type: 'sheet',
-                url: 'data/Yespers_OPEX.xlsx',
-				rowMapping: 'dataset',
-				datasetLabels: 'Sheet1!B1',
-				indexLabels: 'Sheet1!A2:A11',
-				data: 'Sheet1!B2:B11'
-			}
-		}
+  },
   options: {
     maintainAspectRatio: false,
     layout: {
@@ -77,6 +68,9 @@ var myLineChart = new Chart(ctx, {
           display: false,
           drawBorder: false
         },
+        ticks: {
+          maxTicksLimit: 7
+        }
       }],
       yAxes: [{
         ticks: {
@@ -84,7 +78,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-              return '€' + number_format(value);
+            return '$' + number_format(value);
           }
         },
         gridLines: {
