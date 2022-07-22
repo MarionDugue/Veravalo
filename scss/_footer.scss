@@ -9,11 +9,6 @@ footer.sticky-footer {
 }
 
 
-footer.sticky-footer:after {
-    content: "Does this work";
-    color: #000;
-}
-
 body.sidebar-toggled {
   footer.sticky-footer {
     width: 100%;
