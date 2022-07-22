@@ -1,10 +1,17 @@
 footer.sticky-footer {
-  padding: 2rem 0;
-  flex-shrink: 0;
-  .copyright {
-    line-height: 1;
-    font-size: 0.8rem;
-  }
+    padding: 2rem 0;
+    flex-shrink: 0;
+
+    .copyright {
+        line-height: 1;
+        font-size: 0.8rem;
+    }
+}
+
+
+footer.sticky-footer:after {
+    content: "Does this work";
+    color: #000;
 }
 
 body.sidebar-toggled {
