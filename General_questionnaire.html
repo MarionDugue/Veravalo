@@ -480,47 +480,71 @@
                             </label>
                             <br />
 
-                            
+                            <!-- packaging info knowns collaps-->
+                            <div class="card shadow mb-4">
+                                <details>
+                                    <summary>
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Packaging information</h6>
+                                    </summary>
+                                    <div class="card-body">
+                                        <p>
+                                            <input type="checkbox" id="packinfo1" name="packinfo1" value="1">
+                                            <label for="packinfo1"> Material(s) used</label>
+                                            <br>
+                                            <input type="checkbox" id="packinfo2" name="packinfo2" value="1">
+                                            <label for="packinfo2"> Providers' address</label>
+                                            <br>
+                                            <input type="checkbox" id="packinfo3" name="packinfo3" value="1">
+                                            <label for="packinfo3">
+                                                Weight used per material per unit product
+                                            </label>
+                                            <br />
+                                        </p>
+                                    </div>
+                                </details>
+                            </div>
 
-                            <!-- merged index card and collap -->
-                            
-                                <div class="card shadow mb-4">
-                                    <details>
+
+
+                            <!-- consumer health collaps-->
+                            <div class="card shadow mb-4">
+                                <details>
                                     <summary>
                                         <div class="card-header py-3">
                                             <h6 class="m-0 font-weight-bold text-primary">Consumer health</h6>
                                     </summary>
                                     <div class="card-body">
-                                <p>
-                                    <input type="checkbox" id="cons_info1" name="cons_info1" value="1">
-                                    <label for="cons_info1"> Percentage of each ingredient found in the final product</label>
-                                    <br>
-                                    <input type="checkbox" id="cons_info2" name="cons_info2" value="1">
-                                    <label for="cons_info2">
-                                        Weight used per material per unit product
-                                    </label>
-                                    <br />
-                                </p>
-                                </div>
+                                        <p>
+                                            <input type="checkbox" id="cons_info1" name="cons_info1" value="1">
+                                            <label for="cons_info1"> Percentage of each ingredient found in the final product</label>
+                                            <br>
+                                            <input type="checkbox" id="cons_info2" name="cons_info2" value="1">
+                                            <label for="cons_info2">
+                                                Weight used per material per unit product
+                                            </label>
+                                            <br />
+                                        </p>
+                                    </div>
                                 </details>
                             </div>
-                            
 
 
-                        <label> TESST </label>
-                        <br />
-                        <input name="email" />
-                        <br />
-                        <label>Age</label>
-                        <br />
-                        <input type="radio" id="age" name="age" value="18-35" /> 18 - 35 < br />
-                        <input type="radio" id="age" name="age" value="35+" /> 35 +<br />
-                        <br />
-                        <label>Message</label>
-                        <br />
-                        <textarea name="message"></textarea>
-                        <br />
-                        <br />
+
+                            <label> TESST </label>
+                            <br />
+                            <input name="email" />
+                            <br />
+                            <label>Age</label>
+                            <br />
+                            <input type="radio" id="age" name="age" value="18-35" /> 18 - 35 < br />
+                            <input type="radio" id="age" name="age" value="35+" /> 35 +<br />
+                            <br />
+                            <label>Message</label>
+                            <br />
+                            <textarea name="message"></textarea>
+                            <br />
+                            <br />
                         </form>
                         <button onclick="SubForm()">Submit</button>
                         <!--END FORM-- >
