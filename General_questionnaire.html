@@ -421,7 +421,7 @@
                         <!-- START FORM -->
                         <form id="myForm">
 
-                            <title>Pre-collection questionnaire</title>
+                            <h1>Pre-collection questionnaire</h1>
 
                             <!-- PROCESSING DATA -->
                             <br><title>Processing data</title><br />
@@ -444,7 +444,7 @@
                             <br />
                             <input type="checkbox" id="HR_data5" name="HR_data5" value="1">
                             <label for="HR_data5"> Percentage difference between the lowest and the highest paying job</label>
-
+                            <br />
                             <label>Air pollution</label>
                             <br />
                             <input type="checkbox" id="air_poll1" name="air_poll1" value="1">
@@ -460,7 +460,7 @@
                             <label for="air_poll4">  Address of distribution centers</label>
                             <br />
 
-
+                            <!-- CULTIVATION DATA -->
                             <!-- MISC DATA -->
                             <title>Miscellaneous</title>
 
@@ -493,9 +493,37 @@
                             <br />
 
 
+                            <p>Collapsible Set:</p>
+                            <button class="collapsible">Open Section 1</button>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <button class="collapsible">Open Section 2</button>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <button class="collapsible">Open Section 3</button>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
 
+                            <script>
+                                var coll = document.getElementsByClassName("collapsible");
+                                var i;
 
-
+                                for (i = 0; i < coll.length; i++) {
+                                    coll[i].addEventListener("click", function () {
+                                        this.classList.toggle("active");
+                                        var content = this.nextElementSibling;
+                                        if (content.style.maxHeight) {
+                                            content.style.maxHeight = null;
+                                        } else {
+                                            content.style.maxHeight = content.scrollHeight + "px";
+                                        }
+                                    });
+                                }
+                            </script>
+                                
 
                             <label> TESST </label>
                             <br />
@@ -503,82 +531,82 @@
                             <br />
                             <label>Age</label>
                             <br />
-                            <input type="radio" id="age" name="age" value="18-35" /> 18-35<br />
-                            <input type="radio" id="age" name="age" value="35+" /> 35+<br />
+                            <input type="radio" id="age" name="age" value="18-35" /> 18 - 35 < br />
+                            <input type="radio" id="age" name="age" value="35+" /> 35 +<br />
                             <br />
                             <label>Message</label>
                             <br />
                             <textarea name="message"></textarea>
                             <br />
                             <br />
-                        </form>
+                        </form >
                         <button onclick="SubForm()">Submit</button>
-                        <!-- END FORM -->
-                    </body>
-                    </html>
-               
+                        <!--END FORM-- >
+                    </body >
+                    </html >
 
 
 
-                <!-- End Page Content -->
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
 
-                            <span>Copyright &copy; Veravalo 2022</span>
+                                            < !--End Page Content-- >
+                                            < !--Footer -->
+                                            <footer class="sticky-footer bg-white">
+                                                <div class="container my-auto">
+                                                    <div class="copyright text-center my-auto">
 
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
+                                                        <span>Copyright &copy; Veravalo 2022</span>
 
-                </div>
-            <!-- End of Content Wrapper -->
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                            <!--End of Footer-- >
 
-        </div>
-        <!-- End of Page Wrapper -->
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+                                            </div >
+                                        < !--End of Content Wrapper-- >
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    </div >
+                                    < !--End of Page Wrapper-- >
+                                    < !--Scroll to Top Button-- >
+                                    <a class="scroll-to-top rounded" href="#page-top">
+                                        <i class="fas fa-angle-up"></i>
+                                    </a>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                    <!--Logout Modal-- >
+                                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                                    <a class="btn btn-primary" href="login.html">Logout</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                                    <!--Bootstrap core JavaScript-- >
+                                    <script src="vendor/jquery/jquery.min.js"></script>
+                            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+                            <!-- Core plugin JavaScript-->
+                            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+                            <!-- Custom scripts for all pages-->
+                            <script src="js/sb-admin-2.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+                            <!-- Page level plugins -->
+                            <script src="vendor/chart.js/Chart.min.js"></script>
+
+                            <!-- Page level custom scripts -->
+                            <script src="js/demo/chart-area-demo.js"></script>
+                            <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
