@@ -393,352 +393,360 @@
                             <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
                         </a>
                     </div>
-
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <title>Save Web Form Data to Spreadsheets - Contact Form</title>
-                        <script src="https://code.jquery.com/jquery-3.6.0.js"
-                                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-                                crossorigin="anonymous">
-
-                        </script>
-                        <script>
-                            function SubForm() {
-                                $.ajax({
-                                    url: 'https://api.apispreadsheets.com/data/i8OQu0nZl9NQOE84/',
-                                    type: 'post',
-                                    data: $("#myForm").serializeArray(),
-                                    success: function () {
-                                        alert("Form Data Submitted :)")
-                                    },
-                                    error: function () {
-                                        alert("There was an error :(")
-                                    }
-                                });
-                            }
-                        </script>
-                    </head>
-                    <body>
-                        <!-- START FORM -->
-                        <form id="myForm">
-
-                            <!-- PROCESSING DATA -->
-                            <h2>Processing data</h2>
-                            <br>
-                            <!-- labour data knowns collaps-->
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Labour data</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <small>For each production facilities: </small>
-                                            <br>
-                                            <input type="checkbox" id="HR_data1" name="HR_data1" value="1">
-                                            <label for="HR_data1"> Wage of employees</label>
-                                            <br />
-                                            <input type="checkbox" id="HR_data2" name="HR_data2" value="1">
-                                            <label for="HR_data2"> Knowledge of the existence of in-debted employees</label>
-                                            <br />
-                                            <input type="checkbox" id="HR_data3" name="HR_data3" value="1">
-                                            <label for="HR_data3"> Amount of unpaid overtime hours per employee</label>
-                                            <br />
-                                            <input type="checkbox" id="HR_data4" name="HR_data4" value="1">
-                                            <label for="HR_data4"> Hazardous or non-hazaradous working conditions</label>
-                                            <br />
-                                            <input type="checkbox" id="HR_data5" name="HR_data5" value="1">
-                                            <label for="HR_data5"> Percentage difference between the lowest and the highest paying job</label>
-                                            <br />
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                    <title>Save Web Form Data to Spreadsheets - Contact Form</title>
+                                    <script src="https://code.jquery.com/jquery-3.6.0.js"
+                                            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                                            crossorigin="anonymous">
 
-                                            <br />
-                                        </p>
+                                    </script>
+                                    <script>
+                                        function SubForm() {
+                                            $.ajax({
+                                                url: 'https://api.apispreadsheets.com/data/i8OQu0nZl9NQOE84/',
+                                                type: 'post',
+                                                data: $("#myForm").serializeArray(),
+                                                success: function () {
+                                                    alert("Form Data Submitted :)")
+                                                },
+                                                error: function () {
+                                                    alert("There was an error :(")
+                                                }
+                                            });
+                                        }
+                                    </script>
+                                </head>
+                                <body>
+
+
+
+
+                                    <!-- START FORM -->
+                                    <form id="myForm">
+
+                                        <!-- PROCESSING DATA -->
+                                        <h2>Processing data</h2>
+                                        <br>
+                                        <!-- labour data knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Labour data</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <small>For each production facilities: </small>
+                                                        <br>
+                                                        <input type="checkbox" id="HR_data1" name="HR_data1" value="1">
+                                                        <label for="HR_data1"> Wage of employees</label>
+                                                        <br />
+                                                        <input type="checkbox" id="HR_data2" name="HR_data2" value="1">
+                                                        <label for="HR_data2"> Knowledge of the existence of in-debted employees</label>
+                                                        <br />
+                                                        <input type="checkbox" id="HR_data3" name="HR_data3" value="1">
+                                                        <label for="HR_data3"> Amount of unpaid overtime hours per employee</label>
+                                                        <br />
+                                                        <input type="checkbox" id="HR_data4" name="HR_data4" value="1">
+                                                        <label for="HR_data4"> Hazardous or non-hazaradous working conditions</label>
+                                                        <br />
+                                                        <input type="checkbox" id="HR_data5" name="HR_data5" value="1">
+                                                        <label for="HR_data5"> Percentage difference between the lowest and the highest paying job</label>
+                                                        <br />
+
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+
+                                        <!-- Air pollution knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Air pollution</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="air_poll1" name="air_poll1" value="1">
+                                                        <label for="air_poll1"> Address of the providers of the ingredients</label>
+                                                        <br />
+                                                        <input type="checkbox" id="air_poll2" name="air_poll2" value="1">
+                                                        <label for="air_poll2"> Energy source of processing facilities</label>
+                                                        <br />
+                                                        <input type="checkbox" id="air_poll3" name="air_poll3" value="1">
+                                                        <label for="air_poll3">  List of applicances using electricity to make the product</label>
+                                                        <br />
+                                                        <input type="checkbox" id="air_poll4" name="air_poll4" value="1">
+                                                        <label for="air_poll4">  Address of distribution centers</label>
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+
+
+                                        <!-- CULTIVATION DATA -->
+                                        <h2>Cultivation data</h2>
+
+                                        <!-- overview knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Overview</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="ov1" name="ov1" value="1">
+                                                        <label for="ov1">  Type of plantation</label>
+                                                        <br />
+                                                        <input type="checkbox" id="ov2" name="ov2" value="1">
+                                                        <label for="ov2"> Organic or not</label>
+                                                        <br />
+                                                        <input type="checkbox" id="ov3" name="ov3" value="1">
+                                                        <label for="ov3">  Crop area</label>
+                                                        <br />
+                                                        <input type="checkbox" id="ov4" name="ov4" value="1">
+                                                        <label for="ov4">  Total harvested amount</label>
+                                                        <br />
+                                                        <input type="checkbox" id="ov5" name="ov5" value="1">
+                                                        <label for="ov5">  Amount rejected at harvest</label>
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+                                        <!-- labour data knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Labour data</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <small>For each production facilities: </small>
+                                                        <br>
+                                                        <input type="checkbox" id="C_HR_data1" name="C_HR_data1" value="1">
+                                                        <label for="C_HR_data1"> Wage of employees</label>
+                                                        <br />
+                                                        <input type="checkbox" id="C_HR_data2" name="C_HR_data2" value="1">
+                                                        <label for="C_HR_data2"> Knowledge of the existence of in-debted employees</label>
+                                                        <br />
+                                                        <input type="checkbox" id="C_HR_data3" name="C_HR_data3" value="1">
+                                                        <label for="C_HR_data3"> Amount of unpaid overtime hours per employee</label>
+                                                        <br />
+                                                        <input type="checkbox" id="C_HR_data4" name="C_HR_data4" value="1">
+                                                        <label for="C_HR_data4"> Hazardous or non-hazaradous working conditions</label>
+                                                        <br />
+                                                        <input type="checkbox" id="C_HR_data5" name="C_HR_data5" value="1">
+                                                        <label for="C_HR_data5"> Percentage difference between the lowest and the highest paying job</label>
+                                                        <br />
+
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+                                        <!-- machinery knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Machinery used</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="machinery1" name="machinery1" value="1">
+                                                        <label for="machinery1"> Type of machinery</label>
+                                                        <br />
+                                                        <input type="checkbox" id="machinery2" name="machinery2" value="1">
+                                                        <label for="machinery2"> Consumption per machinery used over the period of interest</label>
+                                                        <br />
+                                                        <input type="checkbox" id="machinery3" name="machinery3" value="1">
+                                                        <label for="machinery3">  Type of fuel per machinery</label>
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+
+                                        <!-- agor-chemicals knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Agro-chemicals used</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="agro_chem1" name="agro_chem1" value="1">
+                                                        <label for="agro_chem1"> Type of agro-chemicals</label>
+                                                        <br />
+                                                        <input type="checkbox" id="agro_chem2" name="agro_chem2" value="1">
+                                                        <label for="agro_chem2"> Amount used per agro-chemical</label>
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+                                        <!-- cooling facilities knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary"> Cooling facilities</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="cool1" name="cool1" value="1">
+                                                        <label for="cool1"> If cooling facilities are used or not</label>
+                                                        <br />
+                                                        <input type="checkbox" id="cool2" name="cool2" value="1">
+                                                        <label for="cool2"> If transport is needed to and from the cooling facility</label>
+                                                        <br />
+                                                        <input type="checkbox" id="cool3" name="cool3" value="1">
+                                                        <label for="cool3"> The amount of time cooling facilities are used</label>
+                                                        <br />
+                                                        <input type="checkbox" id="cool4" name="cool4" value="1">
+                                                        <label for="cool4"> The % of surface area taken for the product's use</label>
+                                                        <br />
+                                                        <input type="checkbox" id="cool5" name="cool5" value="1">
+                                                        <label for="cool5"> The energy consumption of the cooling facilities</label>
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+
+
+                                        <!-- MISC DATA -->
+                                        <h2>Miscellaneous</h2>
+
+                                        <!-- packaging info knowns collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary">Packaging information</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="packinfo1" name="packinfo1" value="1">
+                                                        <label for="packinfo1"> Material(s) used</label>
+                                                        <br>
+                                                        <input type="checkbox" id="packinfo2" name="packinfo2" value="1">
+                                                        <label for="packinfo2"> Providers' address</label>
+                                                        <br>
+                                                        <input type="checkbox" id="packinfo3" name="packinfo3" value="1">
+                                                        <label for="packinfo3">
+                                                            Weight used per material per unit product
+                                                        </label>
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+
+
+                                        <!-- consumer health collaps-->
+                                        <div class="card shadow mb-4">
+                                            <details>
+                                                <summary>
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary">Consumer health</h6>
+                                                </summary>
+                                                <div class="card-body">
+                                                    <p>
+                                                        <input type="checkbox" id="cons_info1" name="cons_info1" value="1">
+                                                        <label for="cons_info1"> Percentage of each ingredient found in the final product</label>
+                                                        <br>
+                                                        <input type="checkbox" id="cons_info2" name="cons_info2" value="1">
+                                                        <label for="cons_info2">
+                                                            Weight used per material per unit product
+                                                        </label>
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+
+
+                                        <!--END FORM-->
+                                </body>
+                            </html>
+
+                        </div>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Sustainable Development Goals affected</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                         aria-labelledby="dropdownMenuLink">
+                                        <div class="dropdown-header">Dropdown Header:</div>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
                                     </div>
-                                </details>
+                                </div>
                             </div>
-
-
-                            <!-- Air pollution knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Air pollution</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="air_poll1" name="air_poll1" value="1">
-                                            <label for="air_poll1"> Address of the providers of the ingredients</label>
-                                            <br />
-                                            <input type="checkbox" id="air_poll2" name="air_poll2" value="1">
-                                            <label for="air_poll2"> Energy source of processing facilities</label>
-                                            <br />
-                                            <input type="checkbox" id="air_poll3" name="air_poll3" value="1">
-                                            <label for="air_poll3">  List of applicances using electricity to make the product</label>
-                                            <br />
-                                            <input type="checkbox" id="air_poll4" name="air_poll4" value="1">
-                                            <label for="air_poll4">  Address of distribution centers</label>
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-
-
-                            <!-- CULTIVATION DATA -->
-                            <h2>Cultivation data</h2>
-
-                            <!-- overview knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Overview</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="ov1" name="ov1" value="1">
-                                            <label for="ov1">  Type of plantation</label>
-                                            <br />
-                                            <input type="checkbox" id="ov2" name="ov2" value="1">
-                                            <label for="ov2"> Organic or not</label>
-                                            <br />
-                                            <input type="checkbox" id="ov3" name="ov3" value="1">
-                                            <label for="ov3">  Crop area</label>
-                                            <br />
-                                            <input type="checkbox" id="ov4" name="ov4" value="1">
-                                            <label for="ov4">  Total harvested amount</label>
-                                            <br />
-                                            <input type="checkbox" id="ov5" name="ov5" value="1">
-                                            <label for="ov5">  Amount rejected at harvest</label>
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <!-- labour data knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Labour data</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <small>For each production facilities: </small>
-                                            <br>
-                                            <input type="checkbox" id="C_HR_data1" name="C_HR_data1" value="1">
-                                            <label for="C_HR_data1"> Wage of employees</label>
-                                            <br />
-                                            <input type="checkbox" id="C_HR_data2" name="C_HR_data2" value="1">
-                                            <label for="C_HR_data2"> Knowledge of the existence of in-debted employees</label>
-                                            <br />
-                                            <input type="checkbox" id="C_HR_data3" name="C_HR_data3" value="1">
-                                            <label for="C_HR_data3"> Amount of unpaid overtime hours per employee</label>
-                                            <br />
-                                            <input type="checkbox" id="C_HR_data4" name="C_HR_data4" value="1">
-                                            <label for="C_HR_data4"> Hazardous or non-hazaradous working conditions</label>
-                                            <br />
-                                            <input type="checkbox" id="C_HR_data5" name="C_HR_data5" value="1">
-                                            <label for="C_HR_data5"> Percentage difference between the lowest and the highest paying job</label>
-                                            <br />
-
-                                            <br />
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <!-- machinery knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Machinery used</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="machinery1" name="machinery1" value="1">
-                                            <label for="machinery1"> Type of machinery</label>
-                                            <br />
-                                            <input type="checkbox" id="machinery2" name="machinery2" value="1">
-                                            <label for="machinery2"> Consumption per machinery used over the period of interest</label>
-                                            <br />
-                                            <input type="checkbox" id="machinery3" name="machinery3" value="1">
-                                            <label for="machinery3">  Type of fuel per machinery</label>
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-
-                            <!-- agor-chemicals knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Agro-chemicals used</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="agro_chem1" name="agro_chem1" value="1">
-                                            <label for="agro_chem1"> Type of agro-chemicals</label>
-                                            <br />
-                                            <input type="checkbox" id="agro_chem2" name="agro_chem2" value="1">
-                                            <label for="agro_chem2"> Amount used per agro-chemical</label>
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-                            <!-- cooling facilities knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary"> Cooling facilities</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="cool1" name="cool1" value="1">
-                                            <label for="cool1"> If cooling facilities are used or not</label>
-                                            <br />
-                                            <input type="checkbox" id="cool2" name="cool2" value="1">
-                                            <label for="cool2"> If transport is needed to and from the cooling facility</label>
-                                            <br />
-                                            <input type="checkbox" id="cool3" name="cool3" value="1">
-                                            <label for="cool3"> The amount of time cooling facilities are used</label>
-                                            <br />
-                                            <input type="checkbox" id="cool4" name="cool4" value="1">
-                                            <label for="cool4"> The % of surface area taken for the product's use</label>
-                                            <br />
-                                            <input type="checkbox" id="cool5" name="cool5" value="1">
-                                            <label for="cool5"> The energy consumption of the cooling facilities</label>
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-
-
-                            <!-- MISC DATA -->
-                            <h2>Miscellaneous</h2>
-
-                            <!-- packaging info knowns collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary">Packaging information</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="packinfo1" name="packinfo1" value="1">
-                                            <label for="packinfo1"> Material(s) used</label>
-                                            <br>
-                                            <input type="checkbox" id="packinfo2" name="packinfo2" value="1">
-                                            <label for="packinfo2"> Providers' address</label>
-                                            <br>
-                                            <input type="checkbox" id="packinfo3" name="packinfo3" value="1">
-                                            <label for="packinfo3">
-                                                Weight used per material per unit product
-                                            </label>
-                                            <br />
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-
-
-                            <!-- consumer health collaps-->
-                            <div class="card shadow mb-4">
-                                <details>
-                                    <summary>
-                                        <div class="card-header py-3">
-                                            <h6 class="m-0 font-weight-bold text-primary">Consumer health</h6>
-                                    </summary>
-                                    <div class="card-body">
-                                        <p>
-                                            <input type="checkbox" id="cons_info1" name="cons_info1" value="1">
-                                            <label for="cons_info1"> Percentage of each ingredient found in the final product</label>
-                                            <br>
-                                            <input type="checkbox" id="cons_info2" name="cons_info2" value="1">
-                                            <label for="cons_info2">
-                                                Weight used per material per unit product
-                                            </label>
-                                            <br />
-                                        </p>
-                                    </div>
-                                </details>
-                            </div>
-
-
-                        <!--END FORM-->
-                    </body>
-                </html>
-
-                <!-- Pie Chart -->
-                <div class="col-xl-4 col-lg-5">
-                    <div class="card shadow mb-4">
-                        <!-- Card Header - Dropdown -->
-                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Sustainable Development Goals affected</h6>
-                            <div class="dropdown no-arrow">
-                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                     aria-labelledby="dropdownMenuLink">
-                                    <div class="dropdown-header">Dropdown Header:</div>
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+                                <div class="mt-4 text-center small">
+                                    <span class="mr-2">
+                                        <i class="fas fa-circle text-primary"></i> 3. Good health and well-being
+                                    </span>
+                                    <span class="mr-2">
+                                        <i class="fas fa-circle text-success"></i> 13. Climate action
+                                    </span>
+                                    <span class="mr-2">
+                                        <i class="fas fa-circle text-info"></i> 15. Life on land
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <!-- Card Body -->
-                        <div class="card-body">
-                            <div class="chart-pie pt-4 pb-2">
-                                <canvas id="myPieChart"></canvas>
-                            </div>
-                            <div class="mt-4 text-center small">
-                                <span class="mr-2">
-                                    <i class="fas fa-circle text-primary"></i> 3. Good health and well-being
-                                </span>
-                                <span class="mr-2">
-                                    <i class="fas fa-circle text-success"></i> 13. Climate action
-                                </span>
-                                <span class="mr-2">
-                                    <i class="fas fa-circle text-info"></i> 15. Life on land
-                                </span>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                    </div> <!-- End row content -->
+                        <!-- End Page Content -->
+                        <!-- Footer -->
+                        <footer class="sticky-footer bg-white">
+                            <div class="container my-auto">
+                                <div class="copyright text-center my-auto">
 
+                                    <span>Copyright &copy; Veravalo 2022</span>
 
-                <!-- End Page Content -->
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
+                                </div>
+                            </div>
+                        </footer>
+                        <!-- End of Footer -->
 
-                            <span>Copyright &copy; Veravalo 2022</span>
-
-                        </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                    <!-- End of Content Wrapper -->
 
-                </div>
-            <!-- End of Content Wrapper -->
-
-        </div>
+                    </div>
         <!-- End of Page Wrapper -->
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top">
