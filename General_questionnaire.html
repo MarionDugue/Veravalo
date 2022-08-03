@@ -418,20 +418,84 @@
                         </script>
                     </head>
                     <body>
+                        <!-- START FORM -->
                         <form id="myForm">
+
                             <title>Pre-collection questionnaire</title>
-                            <label>General information</label>
+
+                            <!-- PROCESSING DATA -->
+                            <br><title>Processing data</title><br />
+                            <br>
+                            <label>Labour data</label>
                             <br />
-                            <input type="checkbox" id="geninfo1" name="geninfo1" value="perc_ing">
-                            <label for="geninfo1"> Percentage of each ingredient found in the final product</label>
+                            <small>For each production facilities: <small/>
+                            <input type="checkbox" id="HR_data1" name="HR_data1" value="1">
+                            <label for="HR_data1"> Wage of employees</label>
+                            <br />
+                            <input type="checkbox" id="HR_data2" name="HR_data2" value="1">
+                            <label for="HR_data2"> Knowledge of the existence of in-debted employees</label>
+                            <br />
+                            <input type="checkbox" id="HR_data3" name="HR_data3" value="1">
+                            <label for="HR_data3"> Amount of unpaid overtime hours per employee</label>
+                            <br />
+                            <input type="checkbox" id="HR_data4" name="HR_data4" value="1">
+                            <label for="HR_data4"> Hazardous or non-hazaradous working conditions</label>
+                            <br />
+                            <input type="checkbox" id="HR_data5" name="HR_data5" value="1">
+                            <label for="HR_data5"> Percentage difference between the lowest and the highest paying job</label>
+
+                            <label>Air pollution</label>
+                            <br />
+                            <input type="checkbox" id="air_poll1" name="air_poll1" value="1">
+                            <label for="air_poll1"> Address of the providers of the ingredients</label>
+                            <br />
+                            <input type="checkbox" id="air_poll2" name="air_poll2" value="1">
+                            <label for="air_poll2"> Energy source of processing facilities</label>
+                            <br />
+                            <input type="checkbox" id="air_poll3" name="air_poll3" value="1">
+                            <label for="air_poll3">  List of applicances using electricity to make the product</label>
+                            <br />
+                            <input type="checkbox" id="air_poll4" name="air_poll4" value="1">
+                            <label for="air_poll4">  Address of distribution centers</label>
+                            <br />
+                      
+
+                            <!-- MISC DATA -->
+                            <title>Miscellaneous</title>
+
+                            <!-- packaging info knowns -->
                             <br>
-                            <input type="checkbox" id="geninfo2" name="geninfo2" value="nutrient_profile">
-                            <label for="geninfo2"> Nutrient profile of the product</label>
+                            <label>Packaging information</label>
+                            <br />
+                            <input type="checkbox" id="packinfo1" name="packinfo1" value="1">
+                            <label for="packinfo1"> Material(s) used</label>
                             <br>
-                            <input type="checkbox" id="geninfo3" name="geninfo3" value="pack_info">
-                            <label for="geninfo3">  Packaging information (material used, provider address)
+                            <input type="checkbox" id="packinfo2" name="packinfo2" value="1">
+                            <label for="packinfo2"> Providers' address</label>
+                            <br>
+                            <input type="checkbox" id="packinfo3" name="packinfo3" value="1">
+                            <label for="packinfo3">
+                                Weight used per material per unit product
                             </label>
                             <br />
+
+                            <!-- consumer health knowns -->
+                            <label>Consumer health</label>
+                            <br>
+                            <input type="checkbox" id="cons_info1" name="cons_info1" value="1">
+                            <label for="cons_info1"> Percentage of each ingredient found in the final product</label>
+                            <br>
+                            <input type="checkbox" id="cons_info2" name="cons_info2" value="1">
+                            <label for="cons_info2">
+                                Weight used per material per unit product
+                            </label>
+                            <br />
+
+
+
+
+
+
                             <label> TESST </label>
                             <br />
                             <input name="email" />
@@ -448,8 +512,9 @@
                             <br />
                         </form>
                         <button onclick="SubForm()">Submit</button>
+                        <!-- END FORM -->
                     </body>
-                </html>
+                    </html>
                
 
 
